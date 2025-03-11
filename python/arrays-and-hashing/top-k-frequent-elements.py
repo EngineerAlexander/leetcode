@@ -36,3 +36,32 @@ class Solution:
     
 # Time complexity: O(nlog(n)), because of the sort
 # Space complexity: O(n)
+
+class Solution:
+    def topKFrequent(self, nums: List[int], k: int) -> List[int]:
+
+        # get frequeny map
+        freq_map = {}
+        for num in nums:
+            if num in freq_map.keys():
+                freq_map[num] = freq_map[num] + 1
+            else:
+                freq_map[num] = 1
+
+
+        # since we are guaranteed a unique answer, we can add values based
+        # on frequency to an array, then answer is last k indexes of array
+        freq_array = [[] for i in range(len(nums) + 1)]
+        for val, freq in freq_map.items():
+            freq_array[freq].append(val)
+
+        # obtain results
+        res = []
+        for i in range(len(freq_array) - 1, -1, -1):
+            for n in freq_array[i]:
+                res.append(n)
+                if len(res) == k:
+                    return res
+                
+# Time complexity: O(n), only interate through nums, freq_array prop to nums
+# Space complexity: O(n)
