@@ -1,10 +1,11 @@
 # LeetCode Archive
+
 The following repository consists of study materials and practice problems for leetcode-type questions.
 
 The [neetcode roadmap](https://neetcode.io/roadmap) was used to pick the problems.
 
-# Must-Have Interview Knowledge
 ## Core Data Structures, Algorithms, and Concepts
+
 | Data Structures        | Algorithms           | Concepts                |
 |------------------------|----------------------|-------------------------|
 | Linked Lists           | Breadth-First Search | Bit Manipulation        |
@@ -17,11 +18,13 @@ The [neetcode roadmap](https://neetcode.io/roadmap) was used to pick the problem
 For each of these topics, make sure you understand how to use and implement them and the space and time complexity.
 
 ## Time Complexities
+
 log(x) < x < xlogx < x^2 < 2^x < x!
 
 Also know common algorithms and their time complexities.
 
 ## Powers of 2 Table
+
 | Power of 2 | Exact Value (X)   | Approx Value | X Byte Prefix |
 |------------|-------------------|--------------|---------------|
 | 7          | 128               |              |               |
@@ -35,12 +38,18 @@ Also know common algorithms and their time complexities.
 
 This can be useful in interviews for seeing if integers will fit in computer memory, etc.. Remember just +-3 to the exponent to convert from bits to Bytes.
 
-# Interview Prep PDFs
+## Python Cheat Sheet
+
+An [amazing cheat sheet](https://github.com/peterlamar/python-cp-cheatsheet) for the python programming language can be found at.
+
 ## Coding Skills
+
 [![Preview](media/coding-skills-preview.png)](media/coding-skills.pdf)
 
 ## Soft Skills
+
 [![Preview](media/soft-skills-preview.png)](media/soft-skills.pdf)
 
 ## Product Manager Skills
+
 [![Preview](media/product-manager-skills-preview.png)](media/project-manager-skills.pdf)
