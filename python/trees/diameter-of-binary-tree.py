@@ -13,26 +13,27 @@
 #         self.right = right
 class Solution:
     def diameterOfBinaryTree(self, root: Optional[TreeNode]) -> int:
-        def longestPathBelow(node):
+        def maxLengthBelow(node):
             if not node:
                 return 0
 
-            nonlocal max_diam
+            nonlocal diam
+            
+            left_length = maxLengthBelow(node.left)
+            right_length = maxLengthBelow(node.right)
 
-            left_path = longestPathBelow(node.left)
-            right_path = longestPathBelow(node.right)
+            diam = max(left_length + right_length, diam)
 
-            max_diam = max(max_diam, left_path + right_path, max_diam)
-
-            return max(left_path, right_path) + 1
+            return max(left_length, right_length) + 1
 
         if not root:
             return 0
 
-        max_diam = 0
-        longestPathBelow(root)
+        diam = 0
 
-        return max_diam
+        maxLengthBelow(root)
+
+        return diam
     
 # Time complexity: O(n) to visit every node
-# Space complexity: O(n) for the stack
+# Space complexity: O(n) for the callstack
