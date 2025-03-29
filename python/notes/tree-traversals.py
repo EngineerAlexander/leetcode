@@ -46,12 +46,39 @@ def traversePostorder(node):
 
 # 4 → 5 → 2 → 6 → 3 → 1
 
-# Using a stack to implement DFS preorder traversal
-def traverseDFS(root):
-    stack = [root]
-    while stack:
-        node = stack.pop()
-        if node:
-            print(node.val, end=' ')
-            stack.append(node.right)
-            stack.append(node.left)
+# Iterative DFS Preorder Traversal
+    def preorderTraversal(self, root: Optional[TreeNode]) -> List[int]:
+        if not root:
+            return
+
+        stack = [root]
+        while stack:
+            node = stack.pop()
+            print(node.val)
+
+            # visits left node first
+            if node.right:
+                stack.append(node.right)
+            if node.left:
+                stack.append(node.left)
+
+        return
+    
+# Iterative BFS Traversal Utilizing a Queue
+
+from collections import deque
+
+def bfs(root):
+    if not root:
+        return
+
+    queue = deque([root])
+
+    while queue:
+        node = queue.popleft()
+        print(node.val)
+
+        if node.left:
+            queue.append(node.left)
+        if node.right:
+            queue.append(node.right) 
