@@ -16,7 +16,6 @@ class Node:
         self.neighbors = neighbors if neighbors is not None else []
 """
 
-from typing import Optional
 class Solution:
     def cloneGraph(self, node: Optional['Node']) -> Optional['Node']:
         if not node:
