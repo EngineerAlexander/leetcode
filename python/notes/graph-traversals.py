@@ -1,3 +1,4 @@
+# Adjacency List Representation
 graph = {
     'A': ['B', 'C'],
     'B': ['D', 'E'],
@@ -6,6 +7,20 @@ graph = {
     'E': [],
     'F': []
 }
+
+# Adjacency Matrix Representation
+graph = [
+    [0, 1, 1],  # A → B, C
+    [0, 0, 1],  # B → C
+    [0, 0, 0]   # C → none
+]
+
+# Edge List Representation
+edges = [
+    ('A', 'B'),
+    ('A', 'C'),
+    ('B', 'D')
+]
 
 # Depth First Search
 # 1. Explores as far as possible along each branch before backtracking.
