@@ -34,14 +34,14 @@ def dfs_iterative(graph, start):
     stack = [start]
 
     while stack:
-        node = node.pop()
+        node = stack.pop()
         if node not in visited:
             print(node.val)
             visited.add(node.val)
 
             # Reversed to keep the order of traversal because stack is LIFO
             for neighbor in reversed(graph[node]):
-                if node not in graph:
+                if neighbor not in visited:
                     stack.append(neighbor)
 
 # Recursive

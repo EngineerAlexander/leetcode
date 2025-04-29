@@ -2,7 +2,7 @@
 
 The following repository consists of study materials and practice problems for leetcode-type questions.
 
-The [neetcode roadmap](https://neetcode.io/roadmap) was used to pick the problems.
+The [neetcode roadmap](https://neetcode.io/roadmap) and the [leetcode 75](https://leetcode.com/studyplan/leetcode-75/) were used to pick the problems.
 
 ## Core Data Structures, Algorithms, and Concepts
 
