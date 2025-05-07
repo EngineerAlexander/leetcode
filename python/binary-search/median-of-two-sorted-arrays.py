@@ -88,5 +88,5 @@ class Solution:
         
         return 0 # If the code reaches here, the input arrays were not sorted.
     
-# Time complexity: O(logm/logn) ??
+# Time complexity: O(log(min(m, n)))
 # Space complexity: O(1)

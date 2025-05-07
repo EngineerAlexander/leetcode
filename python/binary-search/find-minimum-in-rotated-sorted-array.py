@@ -14,7 +14,6 @@
 
 class Solution:
     def findMin(self, nums: List[int]) -> int:
-        
         # in unrotated (roated length times) min is start, every other is greater
 
         # if random num is greater than end, min is to the right
