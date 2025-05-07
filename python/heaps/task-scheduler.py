@@ -6,6 +6,8 @@
 
 # Return the minimum number of CPU intervals required to complete all tasks.
 
+import heapq
+
 class Solution:
     def leastInterval(self, tasks: List[str], n: int) -> int:
         counts = Counter(tasks)

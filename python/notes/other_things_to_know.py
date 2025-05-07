@@ -37,3 +37,11 @@ from collections import Counter
 test = Counter(['a', 'b', 'a', 'c'])
 test = Counter("abac")
 # Can also use on a dict
+
+# functions in map
+operator_map = {
+    '+': lambda a, b: a + b,
+    '-': lambda a, b: a - b,
+    '*': lambda a, b: a * b,
+    '/': lambda a, b: int(a / b)
+    }
