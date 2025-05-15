@@ -45,3 +45,12 @@ operator_map = {
     '*': lambda a, b: a * b,
     '/': lambda a, b: int(a / b)
     }
+
+# Getting out of dict with a default value
+s1_count = {}
+s1 = "abcde"
+s1_count[s1[i]] = 1 + s1_count.get(s1[i], 0)
+
+# Sorting by certain key
+points = [[1, 2], [3, 4], [5, 6]]
+points.sort(key = lambda x: x[1])
