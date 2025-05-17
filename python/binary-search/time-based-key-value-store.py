@@ -14,6 +14,11 @@
 # All the timestamps timestamp of set are strictly increasing.
 # At most 2 * 105 calls will be made to set and get.
 
+# Your TimeMap object will be instantiated and called as such:
+# obj = TimeMap()
+# obj.set(key,value,timestamp)
+# param_2 = obj.get(key,timestamp)
+
 class TimeMap:
 
     def __init__(self):
@@ -57,8 +62,3 @@ class TimeMap:
             return time_series[mid][1]
         else:
             return ""
-
-# Your TimeMap object will be instantiated and called as such:
-# obj = TimeMap()
-# obj.set(key,value,timestamp)
-# param_2 = obj.get(key,timestamp)

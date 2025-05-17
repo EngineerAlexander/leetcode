@@ -1,3 +1,7 @@
+# Notes on binary trees
+
+start_of_code = True
+
 # Depth-First Traversals
 
 # Inorder (Left → Root → Right)

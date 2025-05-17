@@ -22,5 +22,5 @@ class Solution:
         else:
             return dp[amount]
         
-# Time complexity: O(n * m) where n is the amount and m is the number of coins
-# Space complexity: O(n) for the dp array
+# Time complexity: O(n * m), where n is the amount and m is the number of coins
+# Space complexity: O(n), for the dp array

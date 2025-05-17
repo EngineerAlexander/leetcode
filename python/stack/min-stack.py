@@ -11,6 +11,13 @@
 # Methods pop, top and getMin operations will always be called on 
 # non-empty stacks.
 
+# Your MinStack object will be instantiated and called as such:
+# obj = MinStack()
+# obj.push(val)
+# obj.pop()
+# param_3 = obj.top()
+# param_4 = obj.getMin()
+
 class MinStack:
 
     def __init__(self):
@@ -35,15 +42,6 @@ class MinStack:
 
     def getMin(self) -> int:
         return self.min_stack[-1]
-        
-
-
-# Your MinStack object will be instantiated and called as such:
-# obj = MinStack()
-# obj.push(val)
-# obj.pop()
-# param_3 = obj.top()
-# param_4 = obj.getMin()
 
 # Time complexity: O(1) init, O(1) push, O(1) pop, O(1) top, O(1) getMin
 # Space complexity: O(n) where n is the number of elements in the stack

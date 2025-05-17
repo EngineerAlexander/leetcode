@@ -17,6 +17,13 @@
 # void unfollow(int followerId, int followeeId) The user with ID 
 # followerId started unfollowing the user with ID followeeId.
 
+# Your Twitter object will be instantiated and called as such:
+# obj = Twitter()
+# obj.postTweet(userId,tweetId)
+# param_2 = obj.getNewsFeed(userId)
+# obj.follow(followerId,followeeId)
+# obj.unfollow(followerId,followeeId)
+
 class Twitter:
 
     def __init__(self):
@@ -53,11 +60,3 @@ class Twitter:
     def unfollow(self, followerId: int, followeeId: int) -> None:
         if followeeId in self.followMap[followerId]:
             self.followMap[followerId].remove(followeeId)
-
-
-# Your Twitter object will be instantiated and called as such:
-# obj = Twitter()
-# obj.postTweet(userId,tweetId)
-# param_2 = obj.getNewsFeed(userId)
-# obj.follow(followerId,followeeId)
-# obj.unfollow(followerId,followeeId)

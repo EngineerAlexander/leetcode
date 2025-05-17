@@ -12,6 +12,11 @@
 # word in search consist of '.' or lowercase English letters.
 # There will be at most 2 dots in word for search queries.
 
+# Your WordDictionary object will be instantiated and called as such:
+# obj = WordDictionary()
+# obj.addWord(word)
+# param_2 = obj.search(word)
+
 class WordDictionary:
 
     def __init__(self):
@@ -24,8 +29,6 @@ class WordDictionary:
                 cur[char] = {}
             cur = cur[char]
         cur['$'] = {}
-        # Time complexity: O(n) for adding a word
-        # Space complexity: O(n) for the trie
 
     def search(self, word: str) -> bool:
         def search_subword(word, cur):
@@ -42,10 +45,11 @@ class WordDictionary:
             return "$" in cur
 
         return search_subword(word, self.trie)
-        # Time complexity: O(m) for searching a word (since we have at most 2 dots)
-        # Space complexity: O(n) for the trie
+    
+# Complexity addWord
+# Time complexity: O(n) for adding a word
+# Space complexity: O(n) for the trie
 
-# Your WordDictionary object will be instantiated and called as such:
-# obj = WordDictionary()
-# obj.addWord(word)
-# param_2 = obj.search(word)
+# Complexity search
+# Time complexity: O(m) for searching a word (since we have at most 2 dots)
+# Space complexity: O(n) for the trie

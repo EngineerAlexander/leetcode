@@ -33,17 +33,7 @@ class Solution:
             res.append(layer[-1])
 
         return res
-    
-# Time complexity: O(n) to visit every node
-# Space complexity: O(n) for the callstack (n = every node)
 
-# BFS solution
-# Definition for a binary tree node.
-# class TreeNode:
-#     def __init__(self, val=0, left=None, right=None):
-#         self.val = val
-#         self.left = left
-#         self.right = right
 class Solution:
     def rightSideView(self, root: Optional[TreeNode]) -> List[int]:
         def bfs(node):
@@ -73,5 +63,11 @@ class Solution:
         if not root:
             return []
         return bfs(root)
+
+# First Solution Complexity
+# Time complexity: O(n) to visit every node
+# Space complexity: O(n) for the callstack (n = every node)
+
+# Second Solution Complexity
 # Time complexity: O(n) to visit every node
 # Space complexity: O(n) because of the queue

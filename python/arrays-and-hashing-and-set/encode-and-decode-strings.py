@@ -4,6 +4,10 @@
 # Constraints:
 # strs[i] contains any possible characters out of 256 valid ASCII characters.
 
+# Your Codec object will be instantiated and called as such:
+# codec = Codec()
+# codec.decode(codec.encode(strs))
+
 class Codec:
     def encode(self, strs: List[str]) -> str:
         """Encodes all sizes first and then all strings.
@@ -58,10 +62,6 @@ class Codec:
             cur_str_start += cur_size
         
         return res
-
-# Your Codec object will be instantiated and called as such:
-# codec = Codec()
-# codec.decode(codec.encode(strs))
 
 # Time complexity: O(n), n is the number of strings
 # Space complexity: O(n), n is the number of strings

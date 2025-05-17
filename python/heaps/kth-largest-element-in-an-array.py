@@ -8,15 +8,13 @@
 
 class Solution:
     def findKthLargest(self, nums: List[int], k: int) -> int:
+        """"Sorting method"""
         nums.sort()
         return nums[-k]
     
-# Time complexity: O(n log n) for sorting
-# Space complexity: O(1) not using any extra space
-
-# Quickselect Solution
 class Solution:
     def findKthLargest(self, nums: List[int], k: int) -> int:
+        """"Quickselect method"""
         length = len(nums)
         # Index we're looking for if the array was sorted
         k = length - k
@@ -38,5 +36,11 @@ class Solution:
                 return nums[p]
 
         return quickSelect(0, length - 1)
+    
+# First Solution Complexity
+# Time complexity: O(n log n) for sorting
+# Space complexity: O(1) not using any extra space
+
+# Second Solution Complexity
 # Time complexity: O(n) on average, O(n^2) in the worst case
 # Space complexity: O(1) for the in-place partitioning

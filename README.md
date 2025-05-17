@@ -4,6 +4,9 @@ The following repository consists of study materials and practice problems for l
 
 The [neetcode roadmap](https://neetcode.io/roadmap) and the [leetcode 75](https://leetcode.com/studyplan/leetcode-75/) were used to pick the problems.
 
+## Notes on Compatibility with LeetCode Viewer repo.
+Please ensure problem filenames are the same as their respective leetcode URL's to enable linking to problem when viewing in [leetcode-viewer](https://github.com/EngineerAlexander/leetcode-viewer) repository.
+
 ## Core Data Structures, Algorithms, and Concepts
 
 | Data Structures        | Algorithms           | Concepts                |

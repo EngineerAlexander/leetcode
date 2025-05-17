@@ -34,9 +34,6 @@ class Solution:
         pass
         return results
     
-# Time complexity: O(nlog(n)), because of the sort
-# Space complexity: O(n)
-
 class Solution:
     def topKFrequent(self, nums: List[int], k: int) -> List[int]:
 
@@ -63,5 +60,10 @@ class Solution:
                 if len(res) == k:
                     return res
                 
+# Complexity Analysis First Solution
+# Time complexity: O(nlog(n)), because of the sort
+# Space complexity: O(n)
+                
+# Complexity Analysis Second Solution
 # Time complexity: O(n), only interate through nums, freq_array prop to nums
 # Space complexity: O(n)

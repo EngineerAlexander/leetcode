@@ -15,3 +15,6 @@ class Solution:
             cost[i] = cost[i] + min(cost[i + 1], cost[i + 2])
 
         return min(cost[0], cost[1])
+    
+# Time complexity: O(n), cause of loop
+# Space complexity: O(1), only using one variable

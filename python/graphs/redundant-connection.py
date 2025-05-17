@@ -20,9 +20,9 @@
 # Note: A tree is generally connected and doesn't have cycles.
 # Identify all the edges that belong to the cycle and return the last one.
 
-# DFS Optimal
 class Solution:
     def findRedundantConnection(self, edges: List[List[int]]) -> List[int]:
+        """"DFS Optimal"""
         n = len(edges)
         adj = [[] for _ in range(n + 1)]
         for u, v in edges:
@@ -58,12 +58,10 @@ class Solution:
                 return [u, v]
 
         return []
-# Time complexity: O(N + E) where N is the number of nodes and E is the number of edges.
-# Space complexity: O(N + E) the graph itself uses this
     
-# UnionFind
 class Solution:
     def findRedundantConnection(self, edges: List[List[int]]) -> List[int]:
+        """"Union Find Optimal"""
         par = [i for i in range(len(edges) + 1)]
         rank = [1] * (len(edges) + 1)
 
@@ -90,5 +88,11 @@ class Solution:
         for n1, n2 in edges:
             if not union(n1, n2):
                 return [n1, n2]
+
+# First Solution Complexity
+# Time complexity: O(N + E) where N is the number of nodes and E is the number of edges.
+# Space complexity: O(N + E) the graph itself uses this
+
+# Second Solution Complexity
 # Time complexity: O(N + E) where N is the number of nodes and E is the number of edges.
 # Space complexity: O(N)

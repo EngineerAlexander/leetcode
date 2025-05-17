@@ -35,10 +35,6 @@ class Solution:
         
         return False
 
-# Time complexity: O(PQ) because We iterate over every node of the root tree (P), 
-# then at each node check if it's identical to subRoot (Q) checks
-# Space complexity: O(P+Q) for the worst case stack is full of nodes and callstack is Q deep checking if equal
-
 class Solution:
     def isSubtree(self, root: Optional[TreeNode], subRoot: Optional[TreeNode]) -> bool:
         def serialize(node):
@@ -50,5 +46,11 @@ class Solution:
         subRootSerialized = serialize(subRoot)
         return subRootSerialized in rootSerialized
     
+# First Solution Complexity
+# Time complexity: O(PQ) because We iterate over every node of the root tree (P), 
+# then at each node check if it's identical to subRoot (Q) checks
+# Space complexity: O(P+Q) for the worst case stack is full of nodes and callstack is Q deep checking if equal
+
+# Second Solution Complexity
 # Time complexity: O(P+Q) for the serialization of both trees
 # Space complexity: O(P+Q) for the serialized strings of both trees

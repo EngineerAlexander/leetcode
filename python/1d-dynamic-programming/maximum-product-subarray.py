@@ -22,3 +22,6 @@ class Solution:
             res = max(res, curMax)
 
         return res
+    
+# Time complexity: O(n)
+# Space complexity: O(1)
