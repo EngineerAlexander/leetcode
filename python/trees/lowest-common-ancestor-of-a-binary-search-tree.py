@@ -24,17 +24,7 @@ class Solution:
             return self.lowestCommonAncestor(root.right, p, q)
         else:
             return root
-        
-# Time complexity: O(N) for the worst case where we have to traverse the entire tree
-# Space complexity: O(N) This is because the maximum amount of space utilized by the 
-# recursion stack would be N since the height of a skewed BST could be N.
 
-# Definition for a binary tree node.
-# class TreeNode:
-#     def __init__(self, x):
-#         self.val = x
-#         self.left = None
-#         self.right = None
 
 class Solution:
     def lowestCommonAncestor(self, root: 'TreeNode', p: 'TreeNode', q: 'TreeNode') -> 'TreeNode':
@@ -51,5 +41,11 @@ class Solution:
             else:
                 return cur
             
+# First Solution Complexity
+# Time complexity: O(N) for the worst case where we have to traverse the entire tree
+# Space complexity: O(N) This is because the maximum amount of space utilized by the 
+# recursion stack would be N since the height of a skewed BST could be N.
+
+# Second Solution Complexity
 # Time complexity: O(N) for the worst case where we have to traverse the entire tree
 # Space complexity: O(1) for the iterative solution

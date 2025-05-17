@@ -17,6 +17,10 @@
 # the element representing the kth largest element in the pool of test 
 # scores so far.
 
+# Your KthLargest object will be instantiated and called as such:
+# obj = KthLargest(k, nums)
+# param_1 = obj.add(val)
+
 import heapq
 class KthLargest:
 
@@ -33,11 +37,6 @@ class KthLargest:
             heapq.heappop(self.minHeap)
 
         return self.minHeap[0]
-
-
-# Your KthLargest object will be instantiated and called as such:
-# obj = KthLargest(k, nums)
-# param_1 = obj.add(val)
 
 # Time complexity:
 # init: O(n) for heapify, pop n-k times and that pop operation takes O(log(n)) for heap of size n,

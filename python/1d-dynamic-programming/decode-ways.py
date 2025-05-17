@@ -1,7 +1,6 @@
 # You have intercepted a secret message encoded as a string of numbers. 
 # The message is decoded via the following mapping:
 
-
 # "1" -> 'A'
 # "2" -> 'B'
 # ...
@@ -44,5 +43,5 @@ class Solution:
 
         return dp[0]
     
-# Time complexity: O(n) where n is the length of the string s.
-# Space complexity: O(n) for the dp array. Note. Can solve this like the house robbber problem with O(1) space using 2 variables.
+# Time complexity: O(n), where n is the length of the string s.
+# Space complexity: O(n), for the dp array. Note. Can solve this like the house robbber problem with O(1) space using 2 variables.

@@ -7,7 +7,6 @@
 # Constraints:
 # There are no repeated edges.
 
-# Solution with DFS
 class Solution:
     def countComponents(self, n: int, edges: List[List[int]]) -> int:
         graph = defaultdict(list)
@@ -32,5 +31,3 @@ class Solution:
                 dfs(i)
 
         return count
-    
-# Solution with Union Find

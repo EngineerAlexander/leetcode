@@ -1,3 +1,7 @@
+# Graph notes:
+
+start_of_code = True
+
 # Adjacency List Representation
 graph = {
     'A': ['B', 'C'],
@@ -80,6 +84,3 @@ def bfs_iterative(graph, start):
             for neighbor in graph[node]:
                 if neighbor not in visited:
                     queue.append(neighbor)
-
-# Recursive
-# Not worth it. Need to manually carry a queue between recursive calls.

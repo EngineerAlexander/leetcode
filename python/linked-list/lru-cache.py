@@ -11,6 +11,11 @@
 # evict the least recently used key.
 # The functions get and put must each run in O(1) average time complexity.
 
+# Your LRUCache object will be instantiated and called as such:
+# obj = LRUCache(capacity)
+# param_1 = obj.get(key)
+# obj.put(key,value)
+
 class Node:
     def __init__(self, key, val, prev = None, next = None):
         self.key = key
@@ -64,8 +69,3 @@ class LRUCache:
         node.prev = self.posttail.prev
         node.next = self.posttail
         self.posttail.prev = node
-
-# Your LRUCache object will be instantiated and called as such:
-# obj = LRUCache(capacity)
-# param_1 = obj.get(key)
-# obj.put(key,value)

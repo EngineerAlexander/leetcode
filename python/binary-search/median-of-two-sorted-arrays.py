@@ -2,9 +2,9 @@
 # return the median of the two sorted arrays.
 # The overall run time complexity should be O(log (m+n)).
 
-# Two Pointer Solution:
 class Solution:
     def findMedianSortedArrays(self, nums1, nums2):
+        """"Two pointer solution"""
         n = len(nums1)
         m = len(nums2)
         i = 0
@@ -35,13 +35,9 @@ class Solution:
         else:
             ans = float(m1) + float(m2)
             return ans / 2.0
-        
-# Time complexity: O(n + m)
-# Space complexity: O(1)
-
-# Binary Search Solution:
 class Solution:
     def findMedianSortedArrays(self, nums1, nums2):
+        """"Binary search solution"""
         n1 = len(nums1)
         n2 = len(nums2)
         
@@ -88,5 +84,10 @@ class Solution:
         
         return 0 # If the code reaches here, the input arrays were not sorted.
     
+# First Solution Complexity:
+# Time complexity: O(n + m)
+# Space complexity: O(1)
+
+# Second Solution Complexity:
 # Time complexity: O(log(min(m, n)))
 # Space complexity: O(1)

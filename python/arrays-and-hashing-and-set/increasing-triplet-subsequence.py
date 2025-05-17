@@ -5,8 +5,6 @@
 # Follow up: Could you implement a solution that runs in 
 # O(n) time complexity and O(1) space complexity?
 
-
-
 class Solution:
     def increasingTriplet(self, nums: List[int]) -> bool:
         # Linear scan, if less than first num new first num, elif less than second num, new 2nd num, ellse we found our triple
@@ -21,5 +19,6 @@ class Solution:
                 return True
 
         return False
+    
 # Time complexity: O(n) because just linear scan
 # Space complexity: O(1) because just 2 variables

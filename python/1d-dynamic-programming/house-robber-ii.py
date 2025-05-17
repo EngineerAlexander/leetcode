@@ -29,3 +29,6 @@ class Solution:
 
         # We can't rob first and last together since they are adjacent
         return max(robArray(nums[:-1]), robArray(nums[1:]))
+    
+# Time complexity: O(n)
+# Space complexity: O(1)

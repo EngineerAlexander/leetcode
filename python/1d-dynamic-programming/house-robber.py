@@ -21,3 +21,6 @@ class Solution:
             rob2 = res
 
         return rob2
+    
+# Time complexity: O(n)
+# Space complexity: O(1)

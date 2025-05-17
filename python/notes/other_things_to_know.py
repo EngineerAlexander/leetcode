@@ -1,5 +1,7 @@
-# Heaps (ONLY IMPLEMENTED AS A MIN HEAP IN PYTHON)
+# Notes on heaps (ONLY IMPLEMENTED AS A MIN HEAP IN PYTHON)
 # Note: To fake max heap, multipy everything by -1 first
+
+start_of_code = True
 
 import heapq
 

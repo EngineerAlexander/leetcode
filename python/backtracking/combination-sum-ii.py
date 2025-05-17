@@ -26,3 +26,8 @@ class Solution:
 
         dfs(target, 0, [])
         return res
+    
+# Time complexity: O(2^n), in the worst case, let us assume that each number is unique.
+# The number of combinations for an array of size N would be 2^N, i.e. each number is 
+# included or excluded in a combination.
+# Space complexity: O(n), combination of size n is stored in the result list.

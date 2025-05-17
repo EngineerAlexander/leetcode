@@ -33,3 +33,6 @@ class Solution:
 
         return results
     
+# Time complexity: O(N^(T/M+1)), Let N be the number of candidates, 
+# T be the target value, and M be the minimal value among the candidates.
+# Space complexity: O(T/M), The maximum depth of recursion is T/M,
