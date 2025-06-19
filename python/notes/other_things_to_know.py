@@ -19,7 +19,7 @@ heapq.heappush(test, 5)
 
 # Time complexity O(1)
 # Get minimum element
-test[-1]
+test[0]
 
 
 
