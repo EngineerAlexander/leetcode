@@ -13,25 +13,23 @@
 
 class Solution:
     def combinationSum(self, candidates: List[int], target: int) -> List[List[int]]:
-        results = []
-        comb = []
+        res = []
+        cur = []
 
-        def backtrack(remain, start):
+        def backtrack(remain, i):
             if remain == 0:
-                results.append(list(comb))
+                res.append(cur[:])
                 return
-            elif remain < 0:
-                # exceeded the scope so stop exploration
+            if remain < 0:
                 return
 
-            for i in range(start, len(candidates)):
-                comb.append(candidates[i])
-                backtrack(remain - candidates[i], i)
-                comb.pop()
+            for j in range(i, len(candidates)):
+                cur.append(candidates[j])
+                backtrack(remain - candidates[j], j)
+                cur.pop()
 
         backtrack(target, 0)
-
-        return results
+        return res
     
 # Time complexity: O(N^(T/M+1)), Let N be the number of candidates, 
 # T be the target value, and M be the minimal value among the candidates.

@@ -8,19 +8,19 @@ class Solution:
     def subsets(self, nums: List[int]) -> List[List[int]]:
         res = []
         cur = []
-        def backtracking(i):
+        def backtrack(i):
             if i == len(nums):
                 res.append(cur[:])
                 return
 
-            backtracking(i + 1)
-
+            backtrack(i + 1)
+            
             cur.append(nums[i])
-            backtracking(i + 1)
+            backtrack(i + 1)
             cur.pop()
 
-        backtracking(0)
+        backtrack(0)
         return res
     
-# Time complexity: O(2^n) for recursion calls (either can include or exclude each element)
+# Time complexity: O(n*2^n) for recursion calls 2^n (either can include or exclude each element), then copy takes n time
 # Space complexity: O(n) for the recursion stack
