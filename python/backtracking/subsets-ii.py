@@ -6,24 +6,22 @@
 
 class Solution:
     def subsetsWithDup(self, nums: List[int]) -> List[List[int]]:
-        # Sorting will help us to skip a number that have been
-        # already used at i-th position at specific permutation.
         nums.sort()
-        ans = []
+        res = []
         cur = []
-        def backtrack(i, cur):
-            ans.append(cur[:])
-            
+        def backtrack(i):
+            res.append(cur[:])
+
             for j in range(i, len(nums)):
-                # We can re-use numbers, but not at this position
-                # and same previous premutation
-                if j > i and nums[j] == nums[j-1]:
+                if j > i and nums[j] == nums[j - 1]:
                     continue
+
                 cur.append(nums[j])
-                backtrack(j+1, cur)
+                backtrack(j + 1)
                 cur.pop()
-        backtrack(0, cur)
-        return ans
+
+        backtrack(0)
+        return res
 
 # Time complexity: O(n * 2^n)
 # Space complexity: O(n)
